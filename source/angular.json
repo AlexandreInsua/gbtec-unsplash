@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "imatia-unsplash": {
+    "gbtec-unsplash": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/imatia-unsplash",
+            "outputPath": "dist/gbtec-unsplash",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "imatia-unsplash:build"
+            "browserTarget": "gbtec-unsplash:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "imatia-unsplash:build:production"
+              "browserTarget": "gbtec-unsplash:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "imatia-unsplash:build"
+            "browserTarget": "gbtec-unsplash:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "imatia-unsplash:serve"
+            "devServerTarget": "gbtec-unsplash:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "imatia-unsplash:serve:production"
+              "devServerTarget": "gbtec-unsplash:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "imatia-unsplash"
+  "defaultProject": "gbtec-unsplash"
 }

@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="detail">
+        <div class="img">
+            <img src="{{resource.urls.regular}}" alt="{{resource.alt_description}}">
+            <caption>{{resource.description?resource.description:''}}</caption>
+        </div>
+        <div class="data">
+            <div id="pimage">
+                <img src="{{resource.user.profile_image.large}}" alt="" srcset="">
+            </div>
+            <div id="username" class="text">
+                <span class="tag">
+                    Author
+                </span>
+                <span class="value">
+                    {{resource.user.name}}
+                </span>
+            </div>
+            <div id="location" class="text" *ngIf="resource.user.location">
+                <span class="tag">
+                    Location
+                </span>
+                <span class="value">
+                    {{resource.user.location}}
+
+                </span>
+            </div>
+            <div id="bio" class="text" *ngIf="resource.user.bio">
+                <span class="tag">Bio</span>
+                <span class="value">
+                    {{resource.user.bio}}
+                </span>
+            </div>
+            <div id="portfolio" class="social" *ngIf="resource.user.portfolio_url">
+                <a href="{{resource.user.social.portfolio_url}}" target="_blank" title="portofolio">
+                    <fa-icon [icon]="globe"></fa-icon>
+                </a>
+            </div>
+            <div id="instagram" class="social" *ngIf="resource.user.social.instagram_username">
+                <a href="https://instagram.com/{{resource.user.social.instagram_username}}" target="_blank"
+                    title="instagram">
+                    <fa-icon [icon]="instagram"></fa-icon>
+
+                </a>
+            </div>
+            <div id="twitter" class="social" *ngIf="resource.user.social.twitter_username">
+                <a href="https:///twitter.com/{{resource.user.social.twitter_username}}" target="_blank"
+                    title="twitter">
+                    <fa-icon [icon]="twitter"></fa-icon>
+                </a>
+            </div>
+            <div id="paypal" class="social" *ngIf="resource.user.social.paypal_email">
+                <a href="https://" target="_blank" title="paypal">
+                    <fa-icon [icon]="paypal"></fa-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="up">
+        <button (click)="goToList()">
+            Back
+        </button>
+    </div>
+</div>

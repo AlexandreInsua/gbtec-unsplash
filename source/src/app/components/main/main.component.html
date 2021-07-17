@@ -1,0 +1,19 @@
+<header>
+    <h1>
+        pics App
+    </h1>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a id="list" routerLink="/lista" class="active">
+                <span class="material-icons">view_list</span>List
+            </a>
+        </li>
+    </ul>
+    <div class="wrapper-input">
+        <label for="filter">Filter </label>
+        <input type="text" name="filter" id="filter" [formControl]="filterCtrl">
+    </div>
+</nav>
+<router-outlet></router-outlet>

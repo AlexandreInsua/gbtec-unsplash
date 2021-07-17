@@ -1,0 +1,44 @@
+@import '~@angular/material/theming';
+@import './variables.scss';
+
+@include mat-core();
+
+$gbtec-unsplash-primary: mat-palette($mat-indigo);
+$gbtec-unsplash-accent: mat-palette($mat-pink, A200, A100, A400);
+$gbtec-unsplash-warn: mat-palette($mat-red);
+$gbtec-unsplash-theme: mat-light-theme($gbtec-unsplash-primary, $gbtec-unsplash-accent, $gbtec-unsplash-warn);
+
+@include angular-material-theme($gbtec-unsplash-theme);
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: "Titillium",Verdana,Arial,Roboto, "Helvetica Neue", sans-serif;
+}
+
+.up {
+    width: 6rem;
+    height: 3rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 5rem;
+
+    button{
+        padding: 0 1rem;
+        background: $custom-pink;
+        border-radius: 0.5rem;
+        border: 0.1rem solid $custom-dark-blue; 
+        box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+        color: lightgray;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 3rem;
+        cursor: pointer;
+
+        &:active {
+            color: $custom-pink;
+            background: $custom-dark-blue;
+        }
+    }
+} 
+

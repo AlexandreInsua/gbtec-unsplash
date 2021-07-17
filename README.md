@@ -1,27 +1,43 @@
-# ImatiaUnsplash
+# pics App 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+Buscador de fotos que consume la api [unsplash](https:/unsplash.com) desarrollada con [Angular](https://angular.io) 9.
 
-## Development server
+## Levantar la aplicación en modo desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para levantar la aplicación en modo desarrollo hay que seguir los pasos que se detallan a continuación.
 
-## Code scaffolding
+### Requisitos previos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Es necesario instalar el entorno de ejecucion **NodeJS**. Para ello se debe ir a su [sitio web](https://nodejs.org/es/) y consultar el procedimiento de instalación adecuado para el equipo. La versión usada es la 12.16.1.
 
-## Build
+2. En segundo lugar, hay que instalar **Angular**. En la [web oficial](https://angular.io/) se puede descargar la versión adecuada. Se ha usado Angular 9.0.0.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Preparación y ejecución
 
-## Running unit tests
+3. Descargar el repositorio y descomprimirlo.
+4. Abrir una consola en la raiz del proyecto y moverse dentro de la carpeta `source`.
+5. Instalar las dependencias del proyecto con el comando `$ npm install`.
+6. Lanzar la aplicación con el comando `$ ng serve`. Se levantará un servidor en el puerto 4200 del localhost. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## funcionamiento
 
-## Running end-to-end tests
+### lista de fotos
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Cuando se inicia la aplicación carga una lista de las 10 primeras fotos con el nombre del autor. El resto se va cargando mediante un scroll infinito. 
 
-## Further help
+Haciendo click que cada foto se navega a una página con sus detalles.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+A partir del tercer scrolleo aparece un botón "UP" que navega al princio de la página y resetea la lista.
+
+El filtro funciona en inglés y se va aplicando conforme se escribe para las fotos y ya están cargadas y las que se puedan cargar a maiores si se hace scroll. En algunos casos la estructura de la  información de la api puede perjudicar la performance de la  applicación. 
+
+### detalles de una foto
+
+Cuando se navega a los detalles de una foto desde la lista, se presenta la foto con mayor tamaño y título si lo tiene. Además se incluye la información básica de su autor y sus redes sociales.
+
+Se vuelve a la lista desde el menú de navegación o desde el botón "BACK".
+
+
+
+
+

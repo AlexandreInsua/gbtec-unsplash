@@ -1,0 +1,40 @@
+@import '../../../variables.scss';
+
+.container{
+    min-height: 100%;
+    background: linear-gradient($custom-light-green, $custom-dark-green );
+}
+
+.list {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 70%;
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 18rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.card{     
+    padding: 0.5rem;
+    background-color:lightgray;
+    border: 0.1rem solid $custom-dark-blue; 
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover{
+        cursor: zoom-in;
+        box-shadow: 0.2rem 0.2rem 0.2rem $custom-pink;
+    }
+
+    img{
+        width: 100%;
+        max-height: 15rem;
+        border: 0.1rem solid black;
+        border-radius: 0.2rem;
+    }    
+}
+

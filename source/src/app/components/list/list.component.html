@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="list" infiniteScroll (scrolled)="onScroll()">
+        <div class="card" *ngFor="let r of resources" (click)="goToDetail(r)">
+            <img src="{{r.urls.thumb}}" alt="{{r.alt_description}}">
+            <div>
+                <span class="author">{{r.user.name}}</span>
+                <!-- <span class="like">{{r.likes}}</span> -->
+            </div>
+        </div>
+    </div>
+    <div class="up" *ngIf="page > 3">
+        <button (click)="onScrollTop()">
+            Up
+        </button>
+    </div>
+</div>

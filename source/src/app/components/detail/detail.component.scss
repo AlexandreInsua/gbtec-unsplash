@@ -1,0 +1,132 @@
+@import '../../../variables.scss';
+
+.container{
+    height: 80%;
+    padding: 2rem;
+    background: linear-gradient($custom-light-green, $custom-dark-green );
+}
+
+.detail{
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 80%;
+    background-color:lightgray;
+    border: 0.1rem solid $custom-dark-blue; 
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+
+    // display: grid;
+    // grid-template-columns: repeat( 2, minmax(min(100%, 35rem), 1fr));
+}
+
+.img {
+    margin: 1rem;
+     width: 50%;
+
+    img{
+        width: 100%;
+        max-width: 40rem;
+        height: auto;
+        max-height: 35rem;
+        border: 0.1rem solid $custom-dark-blue;
+        border-radius: 0.5rem;
+        box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+    }
+
+    caption{
+        display: block;
+        font-style: oblique;
+        font-weight: 500;
+    }
+}
+
+
+.data{
+    width: 100%;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        " n n n  pimage"
+        "username username location location"
+        "bio bio bio bio "
+        "portfolio instagram twitter paypal";
+}
+
+// grid components
+#pimage{
+    text-align: right;
+    grid-area: pimage;
+    
+    img{
+        border: 0.1rem solid $custom-dark-blue;
+        border-radius: 25%;
+        box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+    }
+}
+
+#username{
+    grid-area: username;
+}
+
+#location{
+    grid-area: location;
+}
+
+#bio{
+    grid-area:bio;
+}
+
+#portfolio{
+    grid-area:portfolio;
+}
+
+#instagram{
+    grid-area:instagram;
+}
+
+#twitter{
+    grid-area:twitter;
+}
+
+#paypal{
+    grid-area:paypal;
+}
+
+.text, .social{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: $custom-light-green;
+    border: 1px solid $custom-pink;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem $custom-dark-green;
+
+}
+
+span.tag{
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: oblique;
+}
+
+span.value {
+    margin-left: 1rem;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fa-icon{
+        color: black;
+        font-size: 2rem;
+        display: block;
+    }
+}

@@ -1,0 +1,86 @@
+@import '../../../variables.scss';
+
+header{
+    padding: 1rem;
+    color: whitesmoke;
+    background: linear-gradient(90deg, $custom-dark-blue, $custom-dark-green);
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+nav{
+    background: linear-gradient(90deg, $custom-medium-blue, $custom-dark-green);
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    display: inline-block;
+    margin: 0;
+}
+
+ul li {
+    padding: 1rem;
+    min-width: 10rem;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+ 
+    a {
+        color:whitesmoke;
+        font-size: 1.25rem;
+        text-decoration: none;
+        line-height: 1px;
+        
+        .material-icons{
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    
+    a:active{
+        background-color: $custom-dark-green;
+        // text-shadow: (0.2rem 0.2rem 0.2rem $custom-pink );
+    }
+    a:hover{
+        // text-shadow: (0.1rem 0.1rem 0.1rem $custom-pink );
+        letter-spacing: 0.1rem;
+    }   
+}
+ul li a.active {
+    text-decoration: underline;
+    // background-color: $custom-dark-green;
+    // border-left: 0.1rem solid $custom-pink;
+    // border-top:0.1rem solid $custom-pink;
+    // border-right: 0.1rem solid $custom-pink;
+    // border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.wrapper-input{
+    min-width: 15rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+
+    label {
+        color:whitesmoke;
+    }
+    input {
+        min-height: 1.7rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid $custom-dark-green;
+        box-shadow: 0.1rem 0.1rem 0.1rem grey;
+
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.2rem $custom-pink;
+        }
+        &:focus{
+            border:none;
+        }
+    }
+}
