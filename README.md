@@ -19,23 +19,23 @@ Para levantar la aplicación en modo desarrollo hay que seguir los pasos que se 
 5. Instalar las dependencias del proyecto con el comando `$ npm install`.
 6. Lanzar la aplicación con el comando `$ ng serve`. Se levantará un servidor en el puerto 4200 del localhost. 
 
-## funcionamiento
+## Funcionamiento
 
-### lista de fotos
+### Lista de fotos
 
 Cuando se inicia la aplicación carga una lista de las 10 primeras fotos con el nombre del autor. El resto se va cargando mediante un scroll infinito. 
 
 Haciendo click que cada foto se navega a una página con sus detalles.
 
-A partir del tercer scrolleo aparece un botón "UP" que navega al princio de la página y resetea la lista.
+A partir del tercer scrolleo aparece un botón **_UP_** que navega al princio de la página y resetea la lista.
 
-El filtro funciona en inglés y se va aplicando conforme se escribe para las fotos y ya están cargadas y las que se puedan cargar a maiores si se hace scroll. En algunos casos la estructura de la  información de la api puede perjudicar la performance de la  applicación. 
+El filtro funciona en inglés y se va aplicando conforme se escribe para las fotos que ya están cargadas y las que se puedan cargar a mayores si se hace scroll. En algunos casos la estructura de la información de la api puede perjudicar la performance de la  applicación. 
 
-### detalles de una foto
+### Detalles de una foto
 
 Cuando se navega a los detalles de una foto desde la lista, se presenta la foto con mayor tamaño y título si lo tiene. Además se incluye la información básica de su autor y sus redes sociales.
 
-Se vuelve a la lista desde el menú de navegación o desde el botón "BACK".
+Se vuelve a la lista desde el menú de navegación o desde el botón **_BACK_**.
 
 
 
